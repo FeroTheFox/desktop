@@ -2,8 +2,8 @@ import * as React from 'react'
 import memoizeOne from 'memoize-one'
 import { WindowState } from '../../lib/window-state'
 import { WindowControls } from './window-controls'
-import { Octicon } from '../octicons/octicon'
-import * as OcticonSymbol from '../octicons/octicons.generated'
+// import { Octicon } from '../octicons/octicon'
+// import * as OcticonSymbol from '../octicons/octicons.generated'
 import { isMacOSBigSurOrLater } from '../../lib/get-os'
 import {
   getAppleActionOnDoubleClick,
@@ -102,9 +102,9 @@ export class TitleBar extends React.Component<ITitleBarProps> {
     const titleBarClass =
       this.props.titleBarStyle === 'light' ? 'light-title-bar' : ''
 
-    const appIcon = this.props.showAppIcon ? (
-      <Octicon className="app-icon" symbol={OcticonSymbol.markGithub} />
-    ) : null
+    // const appIcon = this.props.showAppIcon ? (
+    //   <Octicon className="app-icon" symbol={OcticonSymbol.markGithub} />
+    // ) : null
 
     const onTitlebarDoubleClick = __DARWIN__
       ? this.onTitlebarDoubleClickDarwin
@@ -119,7 +119,29 @@ export class TitleBar extends React.Component<ITitleBarProps> {
       >
         {topResizeHandle}
         {leftResizeHandle}
-        {appIcon}
+        {/* {appIcon} */}
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="18"
+          height="18"
+          viewBox="0 0 18 18"
+          fill="none"
+          className="app-icon"
+        >
+          <g clip-path="url(#clip0_217_2)">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M8.78607 0L1.84494 1.84493L0 8.78605L2.54558 11.3316L4.39052 4.39491L11.3335 2.54809L8.78607 0ZM18 9.21394L15.4544 6.66836L13.6088 13.6051L6.66644 15.4519L9.21391 18L16.155 16.1551L18 9.21394ZM0.00881464 15.4489L11.3321 4.12565L13.8742 6.66768L2.55085 17.991L0.00881464 15.4489Z"
+              fill="white"
+            />
+          </g>
+          <defs>
+            <clipPath id="clip0_217_2">
+              <rect width="18" height="18" fill="white" />
+            </clipPath>
+          </defs>
+        </svg>
         {this.props.children}
         {winControls}
       </div>

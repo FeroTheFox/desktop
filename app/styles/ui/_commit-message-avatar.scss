@@ -1,8 +1,10 @@
 .commit-message-avatar-component {
   // With this, the popover's absolute position will be relative to its parent
   position: relative;
-  width: var(--text-field-height);
-  height: var(--text-field-height);
+  // width: var(--text-field-height);
+  // height: var(--text-field-height);
+  width: 32px;
+  height: 32px;
 
   .avatar-button {
     // override default button styles

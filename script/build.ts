@@ -290,8 +290,8 @@ function copyDependencies() {
     force: true,
   })
 
-  console.log('  Installing dependencies via yarn…')
-  cp.execSync('yarn install', { cwd: outRoot, env: process.env })
+  // console.log('  Installing dependencies via yarn…')
+  // cp.execSync('yarn install', { cwd: outRoot, env: process.env })
 
   console.log('  Copying desktop-trampoline…')
   const desktopTrampolineDir = path.resolve(outRoot, 'desktop-trampoline')

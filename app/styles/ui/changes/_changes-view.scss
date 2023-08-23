@@ -10,8 +10,10 @@
       user-select: text;
     }
 
-    background: var(--box-alt-background-color);
-    border-bottom: 1px solid var(--diff-border-color);
+    // background: var(--box-alt-background-color);
+    // background: #222326;
+    border-radius: 0 0 0 8px;
+    // border-bottom: 1px solid var(--diff-border-color);
 
     display: flex;
     flex-direction: row;

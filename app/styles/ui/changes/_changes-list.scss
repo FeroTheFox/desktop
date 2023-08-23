@@ -2,6 +2,7 @@
 
 #changes-list {
   min-height: 0;
+  // border-radius: 8px;
 }
 
 /** A React component holding the currently selected repository's changes */
@@ -12,8 +13,8 @@
   min-height: 100px;
 
   .header {
-    background: var(--box-alt-background-color);
-    border-bottom: 1px solid var(--box-border-color);
+    // background: var(--box-alt-background-color);
+    // border-bottom: 1px solid var(--box-border-color);
     padding: 0 var(--spacing);
     height: 29px;
     flex: 0 0 auto;
